@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 
 app.get("/", cors(), function(req, res) {
-    return res.send("Hello World kristaaa");
+    return res.send("Hello World kristaaaa");
 });
 
 app.listen(3000, function(){
