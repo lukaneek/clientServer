@@ -11,7 +11,6 @@ const App = () => {
         console.log(res)
         setBody(res.data)
     })
-
     .catch((err) => {
         console.log(err);
     })
