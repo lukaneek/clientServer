@@ -7,6 +7,10 @@ on:
     paths:
       - 'client/**'
 
+defaults:
+  run:
+    working-directory: client
+
 jobs:
 
   build:
