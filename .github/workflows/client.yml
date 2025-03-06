@@ -25,9 +25,9 @@ jobs:
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build -t lukaneek/clientserver-client:latest .
+      run: docker build -t lukaneek/clientserver-client:client .
     - name: Push to Dockerhub
-      run: docker push lukaneek/clientserver-client:latest
+      run: docker push lukaneek/clientserver-client:client
     
   deploy:
     needs: build
@@ -35,7 +35,7 @@ jobs:
   
     steps:
     - name: Pull docker image
-      run: sudo docker pull lukaneek/clientserver-client:latest
+      run: sudo docker pull lukaneek/clientserver-client:client
     - name: Delete old docker container
       run: sudo docker rm -f clientserver-client || true
     - name: Run docker container
