@@ -11,6 +11,10 @@ jobs:
 
   build:
 
+    defaults:
+      run:
+        working-directory: client
+
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +24,6 @@ jobs:
         DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
         DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-      working-directory: ./client
     - name: Build the Docker image
       run: docker build -t lukaneek/clientserver-client:latest .
     - name: Push to Dockerhub
