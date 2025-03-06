@@ -1,4 +1,4 @@
-name: Client CI/CD
+name: Client CI Pipeline
 
 on:
   push:
@@ -26,16 +26,10 @@ jobs:
       run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
     - name: Build the Docker image
       run: docker build -t lukaneek/clientserver-client:latest .
+    - name: Push to Dockerhub
+      run: docker push lukaneek/clientserver-client:latest
     
-  deploy:
-      needs: build
-      runs-on: self-hosted 
-
-      steps:
-      - name: Delete old docker container
-        run: sudo docker rm -f clientserver-client || true
-      - name: Run docker container
-        run: sudo docker run -d -p 80:80 --name clientserver-client lukaneek/clientserver-client
+  
 
 
   
