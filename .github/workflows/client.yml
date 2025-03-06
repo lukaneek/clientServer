@@ -4,10 +4,8 @@ on:
   push:
     branches: 
       - main
-
-defaults:
-  run:
-    working-directory: client
+    paths:
+      - 'client/**'
 
 jobs:
 
