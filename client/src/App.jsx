@@ -9,7 +9,6 @@ const App = () => {
     })
     .then((res) => {
         console.log(res)
-        
         setBody(res.data)
     })
 
