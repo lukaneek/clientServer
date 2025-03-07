@@ -5,3 +5,5 @@ This is how to set up your target groups with your load balancer in order to mak
 2. For a load balancer to make requests to an ec2 instance, the ec2 instance needs to be accociated to a target group.
 
 3. Next step is to add a listener rule to your load balancer that will route traffic based on the url path.
+
+4. When creating the CI/CD pipeline runnners, make sure to give each runner a unique label.  Use that label in the run-on: section of the client and server yml's.  
