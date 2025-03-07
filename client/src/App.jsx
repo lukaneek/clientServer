@@ -8,8 +8,8 @@ const App = () => {
     axios.get("https://lukavujasin.xyz/exampleapis/", { 
     })
     .then((res) => {
-        console.log(res)
-        setBody(res.data)
+        console.log(res);
+        setBody(res.data);
     })
     .catch((err) => {
         console.log(err);
@@ -19,7 +19,9 @@ const App = () => {
 
   return (
     <>
-    <h1>{body}</h1>
+      <h1>{body}</h1>
+      <p/>
+      <a target="_blank" href="https://github.com/lukaneek/clientServer">Link To This Applications Repository</a>
     </>
 
   )
