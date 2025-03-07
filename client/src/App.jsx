@@ -5,7 +5,7 @@ const App = () => {
   const [body, setBody] = useState("");
 
   useEffect(() => {
-    axios.get("https://172.31.2.131:80", { 
+    axios.get("http://ip-172-31-2-131.us-east-2.compute.internal", { 
     })
     .then((res) => {
         console.log(res)
@@ -15,7 +15,6 @@ const App = () => {
         console.log(err);
     })
 },[]);
-
 
   return (
     <>
