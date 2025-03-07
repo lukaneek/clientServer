@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import AboutThisApp from "../components/AboutThisApp";
 const App = () => {
 
   const [body, setBody] = useState("");
@@ -21,7 +22,7 @@ const App = () => {
     <>
       <h1>{body}</h1>
       <p/>
-      <a target="_blank" href="https://github.com/lukaneek/clientServer">Link To This Applications Repository</a>
+      <AboutThisApp/>
     </>
 
   )
