@@ -5,7 +5,7 @@ const App = () => {
   const [body, setBody] = useState("");
 
   useEffect(() => {
-    axios.get("https://3.144.222.16/exampleapis", { 
+    axios.get("https://lukavujasin.xyz/exampleapis/", { 
     })
     .then((res) => {
         console.log(res)
