@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 
 app.get("/", cors(), function(req, res) {
-    return res.send("Hello World kristaa");
+    return res.send("Simple 2 ec2 instance react frontend with an express backend.");
 });
 
 app.listen(3000, function(){
