@@ -5,7 +5,7 @@ const App = () => {
   const [body, setBody] = useState("");
 
   useEffect(() => {
-    axios.get("https://3.144.222.16", { 
+    axios.get("http://3.144.222.16", { 
     })
     .then((res) => {
         console.log(res)
