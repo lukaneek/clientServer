@@ -5,7 +5,7 @@ const App = () => {
   const [body, setBody] = useState("");
 
   useEffect(() => {
-    axios.get("http://3.144.222.16", { 
+    axios.get("https://3.144.222.16", { 
     })
     .then((res) => {
         console.log(res)
@@ -20,7 +20,6 @@ const App = () => {
   return (
     <>
     <h1>{body}</h1>
-    <h1>sdsds</h1>
     </>
 
   )
