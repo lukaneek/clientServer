@@ -5,7 +5,7 @@ const App = () => {
   const [body, setBody] = useState("");
 
   useEffect(() => {
-    axios.get("http://172.31.2.131:3000", { 
+    axios.get("http://172.31.2.131:80", { 
     })
     .then((res) => {
         console.log(res)
